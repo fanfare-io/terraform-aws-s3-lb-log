@@ -12,7 +12,7 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "waitify-io/eng-all"
+      - "fanfare-io/eng-all"
 
   - package-ecosystem: "terraform"
     directory: "/"
@@ -21,4 +21,4 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "waitify-io/eng-all"
+      - "fanfare-io/eng-all"
