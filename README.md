@@ -4,7 +4,7 @@
 [![Markdown Actions Status](https://github.com/tmknom/terraform-aws-s3-lb-log/workflows/Markdown/badge.svg)](https://github.com/tmknom/terraform-aws-s3-lb-log/actions?query=workflow%3AMarkdown)
 [![YAML Actions Status](https://github.com/tmknom/terraform-aws-s3-lb-log/workflows/YAML/badge.svg)](https://github.com/tmknom/terraform-aws-s3-lb-log/actions?query=workflow%3AYAML)
 [![JSON Actions Status](https://github.com/tmknom/terraform-aws-s3-lb-log/workflows/JSON/badge.svg)](https://github.com/tmknom/terraform-aws-s3-lb-log/actions?query=workflow%3AJSON)
-[![GitHub tag](https://img.shields.io/github/tag/tmknom/terraform-aws-s3-lb-log.svg)](https://registry.terraform.io/modules/tmknom/s3-lb-log/aws)
+[![GitHub tag](https://img.shields.io/github/tag/fanfare-io/terraform-aws-s3-lb-log.svg)](https://github.com/fanfare-io/terraform-aws-s3-lb-log/tags)
 [![License](https://img.shields.io/github/license/tmknom/terraform-aws-s3-lb-log.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Terraform module which creates S3 Bucket resources for Load Balancer Access Logs on AWS.
@@ -27,7 +27,7 @@ This module provides recommended settings.
 
 ```hcl
 module "s3_lb_log" {
-  source                = "git::https://github.com/tmknom/terraform-aws-s3-lb-log.git?ref=tags/2.0.0"
+  source                = "git::https://github.com/fanfare-io/terraform-aws-s3-lb-log.git?ref=v2.1.0"
   name                  = "s3-lb-log"
   logging_target_bucket = "s3-access-log"
 }
@@ -37,7 +37,7 @@ module "s3_lb_log" {
 
 ```hcl
 module "s3_lb_log" {
-  source                = "git::https://github.com/tmknom/terraform-aws-s3-lb-log.git?ref=tags/2.0.0"
+  source                = "git::https://github.com/fanfare-io/terraform-aws-s3-lb-log.git?ref=v2.1.0"
   name                  = "s3-lb-log"
   logging_target_bucket = "s3-access-log"
 
@@ -146,17 +146,13 @@ install                        Install requirements
 lint                           Lint code
 plan-complete                  Run terraform plan examples/complete
 plan-minimal                   Run terraform plan examples/minimal
-release                        Release GitHub and Terraform Module Registry
+release                        Release GitHub
 upgrade                        Upgrade makefile
 ```
 
 ### Releasing new versions
 
-Bump VERSION file, and run `make release`.
-
-### Terraform Module Registry
-
-- <https://registry.terraform.io/modules/tmknom/s3-lb-log/aws>
+Merging to master tags a release from the PR title: `#major` or `#minor` selects the bump, patch is the default, and `#none` skips tagging.
 
 ## License
 
